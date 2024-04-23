@@ -49,6 +49,7 @@ Here is an overview of the required ports that need to be accessible for KEDA to
 | ------ | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `443`  | Used by Kubernetes API server to get metrics | Required for all platforms because it uses Control Plane &#8594; port 443 on the Service IP range communication.<br /><br /> This is not applicable for Google Cloud. |
 | `6443` | Used by Kubernetes API server to get metrics | Only required for Google Cloud because it uses Control Plane &#8594; port 6443 on the Pod IP range for communication                                      |
+| `9443` | Used by Kubernetes API server to validate ScaledObject using keda-admission-webhooks | Only required for Google Cloud because it uses Control Plane &#8594; port 9443 on the Pod IP range for communication                                      |
 <!-- markdownlint-enable no-inline-html -->
 
 ## High Availability
